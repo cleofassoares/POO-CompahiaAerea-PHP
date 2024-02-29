@@ -16,6 +16,7 @@ $aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França',
 $passageiro
 ?>
 
+
 <html>
     <head>
         <title>Minha pagina HTML</title>
