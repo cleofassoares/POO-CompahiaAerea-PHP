@@ -8,6 +8,6 @@ class Voo
     private string $passageiro;
     private string $checkin;
     private string $tripulacao;
-    private  $dataHoraPatida;
+    private  $dataHoraPartida;
     private  $dataHoraChegada;
 }
