@@ -7,6 +7,7 @@ require_once 'Classes/Tripulantes.php';
 require_once 'Classes/Voo.php';
 require_once 'Classes/Cidade.php';
 
+
 $cidade = new Cidade('Araruna', 'Paraná');
 
 $aeronave = new Aeronave('Airbus A320', '240', '1998', 'DISPONIVEL PARA VOO');
@@ -17,6 +18,10 @@ $aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França',
 
 $passageiro = new Passageiro('José Aparecido', "44998457895", '15-95', 'CG459887', true);
 $passageiro_02 = new Passageiro('Maria Ynês', "43955487962", '487-8', 'AA856321', false);
+
+$tripulante = new Tripulante('Maria', 'Ativo', 'Comissário');
+$tripulante_02 = new Tripulante('Joao', 'Ativo', 'Cozinheiro');
+
 
 
 ?>
