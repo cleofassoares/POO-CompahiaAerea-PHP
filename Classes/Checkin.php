@@ -3,8 +3,8 @@
 class Checkin
 {
     private string $nome;
-    private int $numeroPassagem;
-    private int $passaporte;
+    private string $numeroPassagem;
+    private string $passaporte;
     private bool $despacharBagagem;
 
     public function __construct($nome, $numeroPassagem, $passaporte, $despacharBagagem)

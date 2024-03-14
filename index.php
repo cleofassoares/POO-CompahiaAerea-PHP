@@ -6,7 +6,7 @@ require_once 'Classes/Passageiro.php';
 require_once 'Classes/Tripulantes.php';
 require_once 'Classes/Voo.php';
 require_once 'Classes/Cidade.php';
-
+require_once 'Classes/Checkin.php';
 
 $cidade = new Cidade('Araruna', 'Paraná');
 
@@ -22,6 +22,8 @@ $passageiro_02 = new Passageiro('Maria Ynês', "43955487962", '487-8', 'AA856321
 $tripulante = new Tripulantes('Maria', 'Ativo', 'Comissário');
 $tripulante_02 = new Tripulantes('Joao', 'Ativo', 'Cozinheiro');
 
+$checkin = new Checkin('José Aparecido','HZ854','FD985621', true);
+$checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false); 
 
 
 ?>
@@ -56,10 +58,12 @@ $tripulante_02 = new Tripulantes('Joao', 'Ativo', 'Cozinheiro');
         <strong>Aeroporto Partida:</strong> <?= $aeroporto_02->getNome() ?> <br>
         <strong>Aeroporto Destino:</strong> <?= $aeroporto_02->getEndereco() ?> <br>
         <strong>Aeronave:</strong> <?= $aeroporto_02->getStatusPista() ?> <br>
-        <strong>Passageiro</strong>
-        <strong>Tripulação: </strong>
+        <strong>Passageiro:</strong> <?= $passageiro->getNome() ?> <br>
+        <strong>Tripulação:</strong> <?= $tripulante->getNome() ?> <br>
         <strong>Data Hora Partida:</strong>
         <strong>Data hora Chegada:</strong>
+        <h2>TRIPULANTES</h2>
+        
     </BODY>
 </html>
 
