@@ -13,7 +13,9 @@ $aeronave_02 = new Aeronave('Boeing 777', '550', '1994','VOANDO');
 $aeroporto = new Aeroporto('Aeroporto Internacional de Guarulhos', 'São Paulo-Brasil', 'DISPONIVEL');
 $aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França', 'DISPONIVEL');
 
-$passageiro
+$passageiro = new Passageiro('José Aparecido', 44998457895, '15-95', 'CG459887','true');
+$passageiro = new Passageiro('Maria Ynês', 43955487962, '487-8', 'AA856321','false');
+
 ?>
 
 
@@ -41,7 +43,16 @@ $passageiro
         <strong>Nome:</strong> <?= $aeroporto_02->getNome() ?> <br>
         <strong>Endereço:</strong> <?= $aeroporto_02->getEndereco() ?> <br>
         <strong>Status Pista:</strong> <?= $aeroporto_02->getStatusPista() ?> <br>
-        
+        <br>
+        <h2>VOO</h2>
+        <strong>Aeroporto Partida:</strong> <?= $aeroporto_02->getNome() ?> <br>
+        <strong>Aeroporto Destino:</strong> <?= $aeroporto_02->getEndereco() ?> <br>
+        <strong>Aeronave:</strong> <?= $aeroporto_02->getStatusPista() ?> <br>
+        <strong>Passageiro</strong>
+        <strong>Check-in:</strong>
+        <strong>Tripulação:</strong>
+        <strong>Data Hora Partida:</strong>
+        <strong>Data hora Chegada:</strong>
     </BODY>
 </html>
 
