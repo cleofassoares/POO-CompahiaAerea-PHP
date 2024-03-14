@@ -3,9 +3,9 @@
 class Passageiro
 {
     private string $nome;
-    private int $contato;
-    private int $numeroPassagem;
-    private int $passaporte;
+    private string $contato;
+    private string $numeroPassagem;
+    private string $passaporte;
     private bool $checkin;
 
     public function __construct($nome, $contato, $numeroPassagem, $passaporte, $checkin) 
@@ -14,6 +14,7 @@ class Passageiro
         $this->contato = $contato;
         $this->numeroPassagem = $numeroPassagem;
         $this->passaporte = $passaporte;
+        $this->checkin = $checkin;
     }
 
     public function getNome(): string

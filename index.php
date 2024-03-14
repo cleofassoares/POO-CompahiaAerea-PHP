@@ -5,16 +5,19 @@ require_once 'Classes/Aeroporto.php';
 require_once 'Classes/Passageiro.php';
 require_once 'Classes/Tripulantes.php';
 require_once 'Classes/Voo.php';
+require_once 'Classes/Cidade.php';
 
+$cidade = new Cidade('Araruna', 'Paraná');
 
 $aeronave = new Aeronave('Airbus A320', '240', '1998', 'DISPONIVEL PARA VOO');
 $aeronave_02 = new Aeronave('Boeing 777', '550', '1994','VOANDO');
 
-$aeroporto = new Aeroporto('Aeroporto Internacional de Guarulhos', 'São Paulo-Brasil', 'DISPONIVEL');
-$aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França', 'DISPONIVEL');
+$aeroporto = new Aeroporto('Aeroporto Internacional de Guarulhos', 'São Paulo-Brasil', 'DISPONIVEL', $cidade);
+$aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França', 'DISPONIVEL', $cidade);
 
-$passageiro = new Passageiro('José Aparecido', 44998457895, '15-95', 'CG459887','true');
-$passageiro = new Passageiro('Maria Ynês', 43955487962, '487-8', 'AA856321','false');
+$passageiro = new Passageiro('José Aparecido', "44998457895", '15-95', 'CG459887', true);
+$passageiro_02 = new Passageiro('Maria Ynês', "43955487962", '487-8', 'AA856321', false);
+
 
 ?>
 
@@ -49,8 +52,7 @@ $passageiro = new Passageiro('Maria Ynês', 43955487962, '487-8', 'AA856321','fa
         <strong>Aeroporto Destino:</strong> <?= $aeroporto_02->getEndereco() ?> <br>
         <strong>Aeronave:</strong> <?= $aeroporto_02->getStatusPista() ?> <br>
         <strong>Passageiro</strong>
-        <strong>Check-in:</strong>
-        <strong>Tripulação:</strong>
+        <strong>Tripulação: </strong>
         <strong>Data Hora Partida:</strong>
         <strong>Data hora Chegada:</strong>
     </BODY>

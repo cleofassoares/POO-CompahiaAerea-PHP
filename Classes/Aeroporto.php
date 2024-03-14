@@ -5,14 +5,14 @@ class Aeroporto
     private string $nome;
     private string $endereco;
     private string $statusPista;
-    
+    private Cidade $cidade;
 
-    public function __construct($nome, $endereco, $statusPista)
+    public function __construct($nome, $endereco, $statusPista, $cidade)
     {
         $this->nome = $nome;
         $this->endereco = $endereco;
         $this->statusPista = $statusPista;
-        
+        $this->cidade = $cidade;
     }
 
     public function getNome(): string
@@ -32,6 +32,10 @@ class Aeroporto
         } else {
             return 'PISTA INDISPONIVEL';
         }
+    }
+
+    public function getCidade($Cidade){
+        return $this->$Cidade;
     }
 
 }
