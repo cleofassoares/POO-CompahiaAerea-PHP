@@ -19,8 +19,8 @@ $aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França',
 $passageiro = new Passageiro('José Aparecido', "44998457895", '15-95', 'CG459887', true);
 $passageiro_02 = new Passageiro('Maria Ynês', "43955487962", '487-8', 'AA856321', false);
 
-$tripulante = new Tripulantes('Maria', 'Ativo', 'Comissário');
-$tripulante_02 = new Tripulantes('Joao', 'Ativo', 'Cozinheiro');
+$tripulante = new Tripulantes('Maria Augusta', 'Ativo', 'Comissário');
+$tripulante_02 = new Tripulantes('Joao Aparecido', 'Ativo', 'Cozinheiro');
 
 $checkin = new Checkin('José Aparecido','HZ854','FD985621', true);
 $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false); 
@@ -63,6 +63,11 @@ $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false);
         <strong>Data Hora Partida:</strong>
         <strong>Data hora Chegada:</strong>
         <h2>TRIPULANTES</h2>
+        <strong>Nome:</strong> <?= $tripulante->getNome() ?> <br>
+        <strong>Cargo::</strong> <?= $tripulante->getCargo() ?> <br>
+        <strong>Licença:</strong> <?= $tripulante->getLicenca() ?> <br>
+        <h2>PASSAGEIRO</h2>
+        
         
     </BODY>
 </html>
