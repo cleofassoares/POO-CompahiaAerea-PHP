@@ -69,9 +69,9 @@ $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false);
         <h2>PASSAGEIRO</h2>
         <strong>Nome:</strong> <?= $passageiro->getNome() ?> <br>
         <strong>Contato:</strong> <?= $passageiro->getContato() ?> <br>
-        <strong>Numero Passagem:</strong> <?=$passageiro->getNumeroPassagem() ?> <br>
-        <strong>Passaporte:</strong> <?=$passageiro ->getPassaporte() ?> <br>
-        <strong>Checkin:</strong> <?=$passageiro ->getCheckin() ?> <br>
+        <strong>Numero Passagem:</strong> <?= $passageiro->getNumeroPassagem() ?> <br>
+        <strong>Passaporte:</strong> <?= $passageiro ->getPassaporte() ?> <br>
+        <strong>Checkin:</strong> <?= $passageiro ->getCheckin() ?> <br>
     </BODY>
 </html>
 
