@@ -11,6 +11,9 @@ class Voo
     private string $dataHoraPartida;
     private string $dataHoraChegada;
    
+   
+   
+   
     public function __construct ($aeroportoPartida, $aeroportoDestino, $aeronave, $passageiro, $checkin, $tripulacao, $dataHoraPartida, $dataHoraChegada)
     {
        $this->aeroportoPartida = $aeroportoPartida;
@@ -70,6 +73,5 @@ class Voo
     {
         return $this->dataHoraChegada;
     }
-            
-        
+     
 }
