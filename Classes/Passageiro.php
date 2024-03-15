@@ -22,16 +22,16 @@ class Passageiro
         return $this->nome;
     }
 
-    public function getContato(): int
+    public function getContato(): string
     {
         return $this->contato;
     }
 
-    public function getNumeroPassagem(): int
+    public function getNumeroPassagem(): string
     {
         return $this->numeroPassagem;
     }
-    public function getPassaporte(): int
+    public function getPassaporte(): string
     {
         return $this->passaporte;
     }
