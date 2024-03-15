@@ -64,11 +64,14 @@ $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false);
         <strong>Data hora Chegada:</strong>
         <h2>TRIPULANTES</h2>
         <strong>Nome:</strong> <?= $tripulante->getNome() ?> <br>
-        <strong>Cargo::</strong> <?= $tripulante->getCargo() ?> <br>
+        <strong>Cargo:</strong> <?= $tripulante->getCargo() ?> <br>
         <strong>Licença:</strong> <?= $tripulante->getLicenca() ?> <br>
         <h2>PASSAGEIRO</h2>
-        
-        
+        <strong>Nome:</strong> <?= $passageiro->getNome() ?> <br>
+        <strong>Contato:</strong> <?= $passageiro->getContato() ?> <br>
+        <strong>Numero Passagem:</strong> <?$passageiro->getNumeroPassagem() ?> <br>
+        <strong>Passaporte:</strong> <?$passageiro ->getPassaporte() ?> <br>
+        <strong>Checkin:</strong> <?$passageiro ->getCheckin() ?> <br>
     </BODY>
 </html>
 
