@@ -72,8 +72,8 @@ $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false);
         <strong>Numero Passagem:</strong> <?= $passageiro->getNumeroPassagem() ?> <br>
         <strong>Passaporte:</strong> <?= $passageiro ->getPassaporte() ?> <br>
         <strong>Checkin:</strong> <?= $passageiro ->getCheckin() ?> <br>
+        <h2>CIDADE</h2>
+        <strong>Nome:</strong> <?= $cidade -> getNome() ?> <br>
+        <strong>Estado</strong> <?= $cidade ->getEstado() ?> <br>
     </BODY>
 </html>
-
-
-
