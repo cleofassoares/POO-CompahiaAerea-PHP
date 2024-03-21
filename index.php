@@ -7,6 +7,7 @@ require_once 'Classes/Tripulantes.php';
 require_once 'Classes/Voo.php';
 require_once 'Classes/Cidade.php';
 require_once 'Classes/Checkin.php';
+require_once 'Classes/Passagem.php';
 
 $cidade = new Cidade('Araruna', 'Paraná');
 
@@ -24,6 +25,8 @@ $tripulante_02 = new Tripulantes('Joao Aparecido', 'Ativo', 'Cozinheiro');
 
 $checkin = new Checkin('José Aparecido','HZ854','FD985621', true);
 $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false); 
+
+$passagem = new Passagem('Gilberto', 'Rua três', '05-10-2024', '10:00 Am','45678912300');
 
 
 ?>
@@ -75,5 +78,11 @@ $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false);
         <h2>CIDADE</h2>
         <strong>Nome:</strong> <?= $cidade -> getNome() ?> <br>
         <strong>Estado</strong> <?= $cidade ->getEstado() ?> <br>
+        <h2>PASSAGEM</h2>
+        <strong>Nome:</strong> <?= $passagem -> getNome() ?> <br>
+        <strong>Endereço:</strong> <?= $passagem -> getEndereco() ?> <br>
+        <strong>Dia:</strong> <?= $passagem -> getDia() ?> <br>
+        <strong>Cpf:</strong> <?= $passagem -> getCpf() ?> <br>
+        <strong>Hora:</strong> <?= $passagem -> getHora() ?> <br>
     </BODY>
 </html>
