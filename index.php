@@ -9,6 +9,9 @@ require_once 'Classes/Cidade.php';
 require_once 'Classes/Checkin.php';
 require_once 'Classes/Passagem.php';
 
+
+
+
 $cidade = new Cidade('Araruna', 'Paraná');
 
 $aeronave = new Aeronave('Airbus A320', '240', '1998', 'DISPONIVEL PARA VOO');
