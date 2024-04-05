@@ -20,16 +20,16 @@ $aeronave_02 = new Aeronave('Boeing 777', '550', '1994','VOANDO');
 $aeroporto = new Aeroporto('Aeroporto Internacional de Guarulhos', 'São Paulo-Brasil', 'DISPONIVEL', $cidade);
 $aeroporto_02 = new Aeroporto('Aeroporto de Charles de Gaulle', 'Paris-França', 'DISPONIVEL', $cidade);
 
-$passageiro = new Passageiro('José Aparecido', "44998457895", '15-95', 'CG459887', true);
-$passageiro_02 = new Passageiro('Maria Ynês', "43955487962", '487-8', 'AA856321', false);
+$passageiro = new Passageiro('José Aparecido', 18, "12345678900", "M", '99852156', 32, 'Ab-15', true);
+$passageiro_02 = new Passageiro('José Aparecido', 18, "12345678900", "M", '99852156', 32, 'Ab-15', true );
 
-$tripulante = new Tripulantes('Maria Augusta', 'Ativo', 'Comissário');
-$tripulante_02 = new Tripulantes('Joao Aparecido', 'Ativo', 'Cozinheiro');
+$tripulante = new Tripulantes('Maria Augusta', 'Ativo', 'Comissário', 21, "57676576567", "M");
+$tripulante_02 = new Tripulantes('Joao Aparecido', 'Ativo', 'Comissário', 21, "57676576567", "M");
 
 $checkin = new Checkin('José Aparecido','HZ854','FD985621', true);
 $checkin_02 = new Checkin('Maria Ynês', 'GC258','GS87962', false); 
 
-$passagem = new Passagem('Gilberto', 'Rua três', '05-10-2024', '10:00 Am','45678912300');
+$passagem = new Passagem($passageiro, '05-10-2024', '10:00 Am');
 
 
 ?>
@@ -82,10 +82,9 @@ $passagem = new Passagem('Gilberto', 'Rua três', '05-10-2024', '10:00 Am','4567
         <strong>Nome:</strong> <?= $cidade -> getNome() ?> <br>
         <strong>Estado</strong> <?= $cidade ->getEstado() ?> <br>
         <h2>PASSAGEM</h2>
-        <strong>Nome:</strong> <?= $passagem -> getNome() ?> <br>
-        <strong>Endereço:</strong> <?= $passagem -> getEndereco() ?> <br>
+        <strong>Nome:</strong> <?= $passagem->getPassageiro()->getNome() ?> <br>
         <strong>Dia:</strong> <?= $passagem -> getDia() ?> <br>
-        <strong>Cpf:</strong> <?= $passagem -> getCpf() ?> <br>
+        <strong>Cpf:</strong> <?= $passagem -> getPassageiro() -> getCpf() ?> <br>
         <strong>Hora:</strong> <?= $passagem -> getHora() ?> <br>
     </BODY>
 </html>

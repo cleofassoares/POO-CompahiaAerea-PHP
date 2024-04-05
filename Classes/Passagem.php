@@ -1,30 +1,18 @@
 <?php
 
 class Passagem
-{
-    private string $nome;
-    private string $endereco;
+{   
+    private Passageiro $passageiro;
     private string $dia;
-    private string $cpf;
     private string $hora;
-    public function __construct($nome, $endereco,$dia,$hora,$cpf )
-    {
-        $this->nome = $nome;
-        $this->endereco = $endereco;
+
+    public function __construct($passageiro,$dia,$hora)
+    {   
+        $this->passageiro = $passageiro;
         $this->dia= $dia;
         $this->hora= $hora;
-        $this->cpf= $cpf;
     }
 
-    public function getNome(): string
-    {
-        return $this->nome;
-    }
-
-    public function getCpf(): string
-    {
-        return $this->cpf;
-    }
     public function getDia(): string
     {
         return $this->dia;
@@ -33,8 +21,8 @@ class Passagem
     {
         return $this->hora;
     }
-    public function getEndereco(): string
+    public function getPassageiro(): Passageiro
     {
-        return $this->endereco;
+        return $this->passageiro;
     }
 }    

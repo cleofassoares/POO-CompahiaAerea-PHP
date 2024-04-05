@@ -1,19 +1,16 @@
 <?php
-class Tripulantes
+
+require_once "Pessoa.php";
+
+class Tripulantes extends Pessoa
 {
-    public string $nome;
     public string $cargo;
     public string $licenca;
 
-    public function __construct($nome, $cargo, $licenca) {
-        $this->nome = $nome;
+    public function __construct($nome, $cargo, $licenca, $idade, $cpf, $sexo) {
         $this ->cargo = $cargo;
         $this->licenca = $licenca;
-    }
-
-    public function getNome(): String
-    {
-        return $this->nome;
+        parent:: __construct($nome, $idade, $cpf, $sexo);
     }
 
     public function getCargo(): string

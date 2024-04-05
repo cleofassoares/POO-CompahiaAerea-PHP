@@ -1,25 +1,21 @@
 <?php
 
-class Passageiro
+require_once "Pessoa.php";
+
+class Passageiro extends Pessoa
 {
-    private string $nome;
     private string $contato;
     private string $numeroPassagem;
     private string $passaporte;
     private bool $checkin;
 
-    public function __construct($nome, $contato, $numeroPassagem, $passaporte, $checkin) 
+    public function __construct($nome, $idade, $cpf, $sexo, $contato, $numeroPassagem, $passaporte, $checkin) 
     {
-        $this->nome = $nome;
         $this->contato = $contato;
         $this->numeroPassagem = $numeroPassagem;
         $this->passaporte = $passaporte;
         $this->checkin = $checkin;
-    }
-
-    public function getNome(): string
-    {
-        return $this->nome;
+        parent::__construct($nome, $idade, $cpf, $sexo);
     }
 
     public function getContato(): string
@@ -35,7 +31,7 @@ class Passageiro
     {
         return $this->passaporte;
     }
-    public function getCheckin(): bool
+    public function getCheckin(): string
     {
         if ($this->checkin == true){
             return 'SIM';
